@@ -9,9 +9,7 @@ module.exports.config = {
                 before: [
                     "bower_components/jquery/dist/jquery.js",
                     "bower_components/underscore/underscore.js",
-                    "bower_components/backbone/backbone.js",
-                    "bower_components/marionette/lib/backbone.marionette.js",
-                    "bower_components/bootstrap/dist/js/bootstrap.js"
+                    "bower_components/react/react.js"
                 ]
             }
         },
@@ -34,6 +32,7 @@ module.exports.config = {
         }
     },
     server: {
-        port: 3333
+        port: 3333,
+        run: true
     }
 };

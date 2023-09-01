@@ -1,11 +1,6 @@
 .PHONY: build clean start stop list package
 
 clean:
-	if [ -a ./node_modules/pm2/bin/pm2 ] ; \
-    then \
-         make stop ; \
-    fi;
-
 	rm -rf bower_components
 	rm -rf node_modules
 	rm -rf public
@@ -22,7 +17,7 @@ production: clean
 	./node_modules/brunch/bin/brunch build --production
 
 start:
-	./node_modules/pm2/bin/pm2 start pm2-config.json
+	./node_modules/brunch/bin/brunch watch --server
 
 stop:
 	./node_modules/pm2/bin/pm2 stop pm2-config.json
